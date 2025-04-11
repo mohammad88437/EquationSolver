@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("solve-equations").addEventListener("click", function () {
-        // گرفتن مقادیر از ورودی‌ها
+
         let a1 = parseFloat(document.getElementById("a1").value);
         let b1 = parseFloat(document.getElementById("b1").value);
         let c1 = parseFloat(document.getElementById("c1").value);
@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
         let b2 = parseFloat(document.getElementById("b2").value);
         let c2 = parseFloat(document.getElementById("c2").value);
 
-        // محاسبه جواب با روش کرامر (ماتریس ضرایب)
         let D = (a1 * b2) - (a2 * b1);
         let Dx = (c1 * b2) - (c2 * b1);
         let Dy = (a1 * c2) - (a2 * c1);
@@ -31,3 +30,5 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("result").textContent = resultText;
     });
 });
+
+

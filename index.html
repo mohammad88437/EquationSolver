@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دستگاه معادلات</title>
-    <link rel="stylesheet" href="style.css"> <!-- فایل استایل -->
-
+    <link rel="stylesheet" href="style.css">
+    <script src="lang.js" defer></script>
 <style>
      h1  {
         color:white;
@@ -16,11 +16,11 @@
 </head>
 <body>
 
-   <!-- هدر -->
+
 <header>
     <div class="header-container">
         <h1>دستگاه معادلات</h1>
-        <!-- دکمه منو -->
+
         <button id="menu-button" class="menu-button">
             <div class="menu-icon"></div>
             <div class="menu-icon"></div>
@@ -29,16 +29,13 @@
     </div>
 </header>
 
-<!-- منوی کشویی -->
 <nav id="menu" class="menu">
     <ul>
-        <li><a href="#" onclick="toggleLanguage()">English</a></li>
         <li><a href="#" onclick="openModal('aboutModal')">درباره</a></li>
         <li><a href="#" onclick="openModal('contactModal')">ارتباط با ما</a></li>
     </ul>
 </nav>
 
-<!-- مودال درباره -->
 <div id="aboutModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal('aboutModal')">&times;</span>
@@ -55,7 +52,6 @@
     </div>
 </div>
 
-<!-- مودال ارتباط با ما -->
 <div id="contactModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal('contactModal')">&times;</span>
@@ -71,11 +67,12 @@
 <div class="button-container">
     <button id="learn-btn" class="big-button">آموزش</button>
     <button id="practice-btn" class="big-button">حل تمرین</button>
-    <button id="solve-btn" class="big-button">حل دستگاه معادلات</button>
+    <button id="solve-btn" class="big-button">حل دستگاه معادلات خودکار</button>
 </div>
 
-    <script src="script.js"></script> <!-- فایل جاوااسکریپت -->
     <script src="lang.js"></script>
+    <script src="script.js"></script>
+    
 
 </body>
 </html>

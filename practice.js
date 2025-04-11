@@ -11,26 +11,25 @@ function generateLinearEquationQuestion() {
     let options = [];
     let type = Math.random() > 0.5 ? "test" : "descriptive";
     
-    // انتخاب نوع سوال (شیب، عرض از مبدأ یا معادله خطی)
-    let questionType = Math.floor(Math.random() * 3);  // فقط سه گزینه داریم
+    let questionType = Math.floor(Math.random() * 3); 
 
     switch (questionType) {
         case 0:
             // سوال شیب خط
             question = `شیب خطی که از دو نقطه (${a}, ${b}) و (${c}, ${d}) می‌گذرد، چقدر است؟`;
-            answer = (d - b) / (c - a);  // جواب به صورت عددی و بدون اعشار اضافی
+            answer = (d - b) / (c - a);
             break;
         case 1:
             // سوال عرض از مبدأ
             question =` چیست؟ y = ${m}x + ${b} عرض از مبدا خط `;
-            answer = b;  // جواب به صورت عددی
+            answer = b; 
             break;
         case 2:
-            // سوال معادله خطی از دو نقطه
+            
             question = `معادله خطی که از نقطه (${a}, ${b}) و (${c}, ${d}) می‌گذرد، چیست؟`;
-            let slope = (d - b) / (c - a);  // شیب
-            let yIntercept = b - slope * a;  // عرض از مبدأ
-            answer = `y = ${slope}x + ${yIntercept}`;  // معادله خطی
+            let slope = (d - b) / (c - a);
+            let yIntercept = b - slope * a;
+            answer = `y = ${slope}x + ${yIntercept}`;
             break;
     }
 
@@ -47,7 +46,6 @@ function generateLinearEquationQuestion() {
     return { question, options, answer, type };
 }
 
-// تولید سوال جدید
 function generateQuestion() {
     const { question, options, answer, type } = generateLinearEquationQuestion();
     const lang = localStorage.getItem("lang") || "fa";
@@ -65,7 +63,6 @@ function generateQuestion() {
         guidanceMessage = "پاسخ را به صورت معادله خطی (مثلاً y = mx + -b) وارد کنید.";
     }
 
-    // راهنمایی به کاربر
     document.getElementById("guidance-message").innerText = guidanceMessage;
 
     if (type === "test") {
@@ -80,18 +77,15 @@ function generateQuestion() {
             <button onclick='checkAnswer()'>بررسی پاسخ</button>`;
     }
 
-    // پاک کردن پیام قبلی
     document.getElementById("result-message").innerText = "";
     document.getElementById("result-message").className = "";
 }
 
-// بررسی پاسخ تستی
 function checkTestAnswer(selectedOption) {
     const correctAnswer = sessionStorage.getItem("correctAnswer");
     const lang = localStorage.getItem("lang") || "fa";
     const resultEl = document.getElementById("result-message");
 
-    // مقایسه جواب به صورت عددی و بدون اعشار اضافی
     if (parseFloat(selectedOption) === parseFloat(correctAnswer)) {
         resultEl.innerText = "پاسخ درست است!";
         resultEl.className = "correct";
@@ -103,14 +97,12 @@ function checkTestAnswer(selectedOption) {
     setTimeout(() => generateQuestion(), 2000);
 }
 
-// بررسی پاسخ تشریحی
 function checkAnswer() {
     const userAnswer = document.getElementById("answer-input").value.trim();
     const correctAnswer = sessionStorage.getItem("correctAnswer");
     const lang = localStorage.getItem("lang") || "fa";
     const resultEl = document.getElementById("result-message");
 
-    // مقایسه جواب به صورت عددی و بدون اعشار اضافی
     if (parseFloat(userAnswer) === parseFloat(correctAnswer)) {
         resultEl.innerText = "پاسخ درست است!";
         resultEl.className = "correct";
@@ -122,7 +114,6 @@ function checkAnswer() {
     setTimeout(() => generateQuestion(), 2000);
 }
 
-// هنگام بارگذاری صفحه، سوال اولیه نمایش داده می‌شود
 window.onload = function () {
     const savedLang = localStorage.getItem("lang") || "fa";
     setLanguage(savedLang);

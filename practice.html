@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تمرین دستگاه معادلات</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        header {
+            background-color: #00796b;
+            color: white;
+            padding: 20px;
+        }
+        
+        main {
+            margin-top: 50px;
+        }
+        
+        .selection-container {
+            margin-bottom: 20px;
+        }
+        
+        select {
+            font-size: 16px;
+            padding: 8px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #00796b;
+        }
+        
+        #question-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        #answer-input {
+            font-size: 18px;
+            padding: 10px;
+            margin-top: 10px;
+            width: 80%;
+            border-radius: 5px;
+            border: 1px solid #00796b;
+        }
+        
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #004d40;
+        }
+        
+        #result-message {
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        
+        .correct {
+            color: green;
+        }
+        
+        .incorrect {
+            color: red;
+        }
+        
+        
+        </style>
+        
+        
+
+</head>
+<body>
+    <header>
+        <h1>تمرین دستگاه معادلات</h1>
+    </header>
+
+        <!-- دکمه نمایش سوال -->
+        <button onclick="generateQuestion()">نمایش سؤال</button>
+
+        <!-- کادر نمایش سؤال -->
+        <div id="question-container" style="display: none;">
+            <p id="question-text">اینجا سوال نمایش داده می‌شود.</p>
+            <input type="text" id="answer-input" placeholder="جواب خود را وارد کنید">
+            <button onclick="checkAnswer()">بررسی جواب</button>
+            <p id="result-message"></p>
+        </div>
+    </main>
+    <div id="input-hint"></div>
+    <div id="guidance-message" style="margin-top: 10px; font-style: italic; color: #555;"></div>
+
+    <script src="practice.js"></script>
+    <script src="lang.js"></script>
+</body>
+</html>

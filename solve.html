@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حل دستگاه معادلات</title>
+    <link rel="stylesheet" href="style.css"> <!-- فایل استایل -->
+</head>
+<body>
+    <div class="container">
+        <h1>حل دستگاه معادلات</h1>
+        <p>لطفاً ضرایب معادلات را وارد کنید:</p>
+
+        <div class="equation">
+            <input type="number" id="a1" placeholder="ضریب x1">
+            <input type="number" id="b1" placeholder="ضریب y1">
+            <input type="number" id="c1" placeholder="عدد سمت راست معادله 1">
+        </div>
+
+        <div class="equation">
+            <input type="number" id="a2" placeholder="ضریب x2">
+            <input type="number" id="b2" placeholder="ضریب y2">
+            <input type="number" id="c2" placeholder="عدد سمت راست معادله 2">
+        </div>
+
+        <button id="solve-equations">محاسبه</button>
+
+        <h2>نتیجه:</h2>
+        <p id="result"></p>
+    </div>
+<!-- کد جاوااسکریپت برای حل معادله -->
+    <script src="solve.js"></script> 
+
+    <script src="lang.js"></script>
+</body>
+</html>

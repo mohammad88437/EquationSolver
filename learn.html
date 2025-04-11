@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آموزش</title>
+    <link rel="stylesheet" href="style.css">
+
+<style>
+
+    /* استایل برای مودال محتوا */
+.modal-content {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* استایل برای عنوان‌ها */
+.modal-content h2 {
+    color: #007bff;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.modal-content h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* استایل برای لیست مراحل */
+.modal-content ol {
+    margin-left: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* استایل برای متن‌های توضیحی */
+.modal-content p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* استایل برای کدهای نمونه (pre) */
+.modal-content pre {
+    background-color: #eef2f5;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: monospace;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    word-wrap: break-word;
+}
+
+.modal-content pre code {
+    color: #2d2d2d;
+    white-space: pre-wrap;
+}
+
+
+</style>
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>آموزش دستگاه معادلات</h1>
+
+        <div class="modal-content">
+            <h2>روش اول: حل معادلات خطی به روش ترسیمی</h2>
+            <p>در این روش، ما ابتدا دو معادله خطی را به صورت نمودار در یک صفحه مختصات رسم می‌کنیم. نقطه تقاطع دو خط، جواب سیستم معادلات است.</p>
+            <h3>مراحل:</h3>
+            <ol>
+                <li>معادلات خطی را در فرم استاندارد y = mx + b قرار دهید.</li>
+                <li>هر معادله را روی صفحه مختصات رسم کنید.</li>
+                <li>نقطه‌ای که دو خط در آن به هم می‌رسند، جواب معادلات است.</li>
+            </ol>
+            <p>برای مثال، اگر معادلات زیر را داشته باشیم:</p>
+            <pre>
+                y = 2x + 1
+                y = -x + 4
+            </pre>
+            <p>در اینجا، نقاط تقاطع دو خط را پیدا می‌کنیم و جواب معادلات همان نقطه است.</p>
+        </div>
+
+        <div class="modal-content">
+            <h2>روش دوم: حل معادلات خطی به روش حذف</h2>
+            <p>در روش حذف، یکی از متغیرها (x یا y) را از دو معادله حذف می‌کنیم و سپس برای متغیر باقی‌مانده حل می‌کنیم. بعد از پیدا کردن یکی از متغیرها، مقدار آن را در معادله دیگر جایگذاری می‌کنیم.</p>
+            <h3>مراحل:</h3>
+            <ol>
+                <li>یکی از معادلات را طوری ضرب کنید که یکی از متغیرها (x یا y) در دو معادله مشابه شود.</li>
+                <li>با جمع یا تفریق دو معادله، یک متغیر را حذف کنید.</li>
+                <li>مقدار متغیر حذف‌شده را در معادله دیگر جایگذاری کرده و حل کنید.</li>
+            </ol>
+            <p>برای مثال، اگر معادلات زیر را داشته باشیم:</p>
+            <pre>
+                2x + 3y = 12
+                4x - 3y = 8
+            </pre>
+            <p>با جمع کردن این دو معادله، متغیر y حذف می‌شود و با جایگذاری مقدار x در یکی از معادلات، مقدار y به دست می‌آید.</p>
+        </div>
+
+        <div class="modal-content">
+            <h2>روش سوم: حل معادلات خطی به روش جایگذاری</h2>
+            <p>در روش جایگذاری، یکی از معادلات را برای یکی از متغیرها حل می‌کنیم و سپس مقدار آن را در معادله دیگر جایگذاری می‌کنیم تا متغیر دوم را پیدا کنیم.</p>
+            <h3>مراحل:</h3>
+            <ol>
+                <li>یک معادله را برای یکی از متغیرها (x یا y) حل کنید.</li>
+                <li>مقدار به دست آمده را در معادله دوم جایگذاری کنید.</li>
+                <li>مقدار متغیر دوم را پیدا کرده و در معادله اول جایگذاری کنید تا مقدار متغیر اول به دست آید.</li>
+            </ol>
+            <p>برای مثال، اگر معادلات زیر را داشته باشیم:</p>
+            <pre>
+                x + y = 5
+                2x - y = 1
+            </pre>
+            <p>ابتدا از معادله اول، مقدار x را به دست می‌آوریم: <strong>x = 5 - y</strong> و سپس این مقدار را در معادله دوم جایگذاری می‌کنیم تا مقدار y پیدا شود.</p>
+        </div>
+        
+
+
+
+    </div>
+</body>
+</html>

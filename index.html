@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دستگاه معادلات</title>
+    <link rel="stylesheet" href="style.css"> <!-- فایل استایل -->
+
+<style>
+     h1  {
+        color:white;
+     }
+
+</style>
+
+</head>
+<body>
+
+   <!-- هدر -->
+<header>
+    <div class="header-container">
+        <h1>دستگاه معادلات</h1>
+        <!-- دکمه منو -->
+        <button id="menu-button" class="menu-button">
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+        </button>
+    </div>
+</header>
+
+<!-- منوی کشویی -->
+<nav id="menu" class="menu">
+    <ul>
+        <li><a href="#" onclick="toggleLanguage()">English</a></li>
+        <li><a href="#" onclick="openModal('aboutModal')">درباره</a></li>
+        <li><a href="#" onclick="openModal('contactModal')">ارتباط با ما</a></li>
+    </ul>
+</nav>
+
+<!-- مودال درباره -->
+<div id="aboutModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('aboutModal')">&times;</span>
+        <h2>درباره ما</h2>
+            <p>
+                این برنامه توسط محمد یعقوبی، دانش‌آموز پایه نهم مدرسه شهید بهشتی، طراحی و توسعه داده شده است. این پروژه در راستای شرکت در جشنواره نوجوان خوارزمی آماده شده و با راهنمایی‌های ارزشمند جناب آقای مستقیمی، استاد راهنما، به مرحله اجرا رسیده است.<br>
+
+                
+                هدف از این برنامه آموزش و یادگیری بهتر فصل ۶ کتاب نهم (دستگاه معادلات خطی) بوده و تلاش شده تا نیازهای کاربران به بهترین شکل برآورده شود.<br>
+
+                
+                امیدوارم این برنامه براتون مفید باشه و از کار باهاش لذت ببرید!
+            </p>
+    </div>
+</div>
+
+<!-- مودال ارتباط با ما -->
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('contactModal')">&times;</span>
+        <h2>ارتباط با ما</h2>
+        <p>
+            شماره تلفن : 09911322675<br>
+            @mohammad_vj7 : آیدی شاد
+        </p>
+    </div>
+</div>
+
+
+<div class="button-container">
+    <button id="learn-btn" class="big-button">آموزش</button>
+    <button id="practice-btn" class="big-button">حل تمرین</button>
+    <button id="solve-btn" class="big-button">حل دستگاه معادلات</button>
+</div>
+
+    <script src="script.js"></script> <!-- فایل جاوااسکریپت -->
+    <script src="lang.js"></script>
+
+</body>
+</html>
